@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-const PORT =  5000;
+const PORT =  6000;
 
 connectDB();
 
@@ -20,11 +20,11 @@ app.use(cookieParser());
 
 // app.use(express.static(path.join(path.resolve(), "public")));
 app.use("/api/auth", routes.authRouter);
-app.use("/api/category", routes.categoryRouter);
-app.use("/api/product", routes.productRouter);
-app.use("/api/users", routes.userRouter);
-app.use("/api/statistics", routes.statisticsRouter);
-app.use("/api/order", routes.orderRouter);
+// app.use("/api/category", routes.categoryRouter);
+// app.use("/api/product", routes.productRouter);
+// app.use("/api/users", routes.userRouter);
+// app.use("/api/statistics", routes.statisticsRouter);
+// app.use("/api/order", routes.orderRouter);
 
 
 app.listen(PORT, () => {

@@ -5,6 +5,7 @@ import User from "../models/userModel.js";
 export const login = async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email });
+    console.log(user);
     if (user) {
       if (bcrypt.compareSync(req.body.password, user.password)) {
         res.send({
@@ -40,6 +41,6 @@ export const register = async (req, res) => {
       access_token: generateToken(createdUser),
     });
   } catch (error) {
-    res.status(500).send({ message: error });
+    res.status(500).send({ message: error.message });
   }
 };
