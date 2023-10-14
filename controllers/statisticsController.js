@@ -1,11 +1,11 @@
 
 export const generalStatistics = async (req, res) => {
   try {
-    const gas = 5;
-    const rain = 10;
+    const gas = false;it 
+    const rain = 0.22;
     const light = 15;
     const humidity = 20;
-    const temperature = 25;
+    const temperature = 15;
     const soil = 30;
 
     res.send({
