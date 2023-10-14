@@ -1,7 +1,7 @@
 
 export const generalStatistics = async (req, res) => {
   try {
-    const gas = false;it 
+    const gas = false;
     const rain = 0.22;
     const light = 15;
     const humidity = 20;
@@ -18,7 +18,7 @@ export const generalStatistics = async (req, res) => {
     });
   } catch (error) {
     console.error("Error during login:", error);
-    res.status(500).send({ message: "Error during login" });
+    res.status(500).send({ message: "Error during getting statistics" });
   }
 };
 
