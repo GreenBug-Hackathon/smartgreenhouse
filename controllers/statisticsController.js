@@ -1,35 +1,20 @@
-import Category from "../models/categoryModel.js";
-import Order from "../models/orderModel.js";
-import Product from "../models/productModel.js";
 
 export const generalStatistics = async (req, res) => {
   try {
-    const totalProduct = await Product.countDocuments({});
-    const totalPendingOrders = await Order.countDocuments({})
-      .where("status")
-      .equals("Pending");
-
-    const totalDeliveredOrders = await Order.countDocuments({})
-      .where("status")
-      .equals("Delivered");
-
-    const totalCancelledOrders = await Order.countDocuments({})
-      .where("status")
-      .equals("Cancelled");
-
-    const totalWhatsappOrders = await Order.countDocuments({})
-      .where("status")
-      .equals("Cancelled");
-
-    const totalCategories = await Category.countDocuments({});
+    const gas = 5;
+    const rain = 10;
+    const light = 15;
+    const humidity = 20;
+    const temperature = 25;
+    const soil = 30;
 
     res.send({
-      totalProduct,
-      totalPendingOrders,
-      totalDeliveredOrders,
-      totalCancelledOrders,
-      totalWhatsappOrders,
-      totalCategories,
+      gas,
+      rain,
+      light,
+      humidity,
+      temperature,
+      soil,
     });
   } catch (error) {
     console.error("Error during login:", error);

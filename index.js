@@ -22,9 +22,8 @@ app.use(cookieParser());
 app.use("/api/auth", routes.authRouter);
 // app.use("/api/category", routes.categoryRouter);
 // app.use("/api/product", routes.productRouter);
-// app.use("/api/users", routes.userRouter);
+app.use("/api/users", routes.userRouter);
 // app.use("/api/statistics", routes.statisticsRouter);
-// app.use("/api/order", routes.orderRouter);
 
 
 app.listen(PORT, () => {
